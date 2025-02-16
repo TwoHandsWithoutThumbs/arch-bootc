@@ -10,9 +10,9 @@ jobs:
 
   build:
 
-    runs-on: archlinux-latest
+    runs-on: fedora-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Containerfile --tag arch-bootc:latest
+    - name: Build the Podman image
+      run: ./build.sh
